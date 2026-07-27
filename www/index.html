@@ -12,7 +12,15 @@
 <link rel="manifest" href="manifest.json" />
 <link rel="apple-touch-icon" href="icon-192.png" />
 <style>
-  html, body { margin: 0; padding: 0; background: #1C2B33; height: 100%; overflow: hidden; }
+  :root {
+    --bg: #FAF7F2; --surface: #FFFFFF; --surface2: #F0EDE5;
+    --border: #EFEAE0; --header: #1C2B33; --text: #2B2822; --muted: #8B8680;
+  }
+  :root[data-theme="dark"] {
+    --bg: #14110F; --surface: #201C19; --surface2: #2A2521;
+    --border: #38322C; --header: #0E141A; --text: #EDE8E0; --muted: #A8A197;
+  }
+  html, body { margin: 0; padding: 0; background: var(--header); height: 100%; overflow: hidden; }
   #root { height: 100%; }
 </style>
 </head>
